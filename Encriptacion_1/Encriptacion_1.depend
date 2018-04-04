@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1522802745 source:c:\users\gustavo\documents\programacion\algebra-abstracta\encriptacion_1\main.cpp
+	<iostream>
+	<stdio.h>
+	<string>
+
