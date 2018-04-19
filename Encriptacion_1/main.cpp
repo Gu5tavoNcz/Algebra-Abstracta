@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <stdio.h>
 #include <string>
@@ -6,7 +7,7 @@ using namespace std;
 
 string lista="abcdefghijklmnopqrstuvwxyz ";
 
-string ejercicio1(string mensaje)
+string invertir(string &mensaje)
 {
     for(int i=0;i<mensaje.length();i++)
     {
@@ -22,36 +23,92 @@ string ejercicio1(string mensaje)
     return mensaje;
 }
 
-
-string ejercicio2(string mensaje,int clave)
+void encriptado(string &mensaje,int clave)
 {
-
-}
-
-
-int pruebas(string str) {
-    char c = 'a';
-    string reemplazo = "xxx";
-
-    for (int i = 0; i < (int)str.length(); ++i) {
-        if(str[i]==c)
+    string lista[clave],encrip;
+    int cont=1;
+    bool f=true;
+    cout<<"\n\n"<<endl;
+    lista[0].replace(0,1,mensaje,0,1);
+    while(f==true)
+    {
+        for(int i=1;i<clave;i++)
         {
-            str.replace(i,1,reemplazo);
+            if(cont<mensaje.length())
+            {
+                lista[i].resize(cont+1,'.');
+                lista[i].replace(cont,cont+1,mensaje,cont,1);
+                cont++;
+            }
+            else
+            {
+                lista[i].resize(cont,'.');
+                lista[i].replace(cont,cont+1,"*");
+                cont++;
+            }
+        }
+
+        if (cont>=mensaje.length())
+        {
+            f=false;
+            break;
+        }
+
+        for(int i=clave-2;i>=0;i--)
+        {
+            if(cont<mensaje.length())
+            {
+                lista[i].resize(cont+1,'.');
+                lista[i].replace(cont,cont+1,mensaje,cont,1);
+                cont++;
+            }
+            else
+            {
+                lista[i].resize(cont,'.');
+                lista[i].replace(cont,cont+1,"*");
+                cont++;
+            }
+        }
+        if (cont>=mensaje.length())
+            f=false;
+    }
+    for(int i=0;i<clave;i++)
+    {
+        cout<<lista[i]<<endl;
+        encrip+=lista[i];
+    }
+    for(long i=encrip.length()-1;i>=0;i--)
+    {
+        if(encrip[i]=='.')
+        {
+            encrip.erase(i,1);
         }
     }
-
-    cout << str << endl;
-    return 0;
+    mensaje=encrip;
 }
 
+void desencriptado(string mensaje, int clave)
+{
+    invertir(mensaje);
+    for(int i=0;i<100;i++)
+    {
+        encriptado(mensaje,clave);
+        cout<<"\n\n"<<i<<" .- Mensaje encriptado: "<<mensaje<<"\nTamano: "<<mensaje.length()<<endl;
+    }
+}
 
 int main()
 {
     string mensaje;
+    int clave;
     cout<<"Introduzca un mensaje a encriptar: ";
     getline(cin,mensaje);
-    cout<<"Tu mensaje encriptado es: "<<ejercicio1(mensaje)<<endl;
-    cout<<mensaje<<"\n";
-    pruebas(mensaje);
-    cout<<mensaje<<"\n";
+    cout<<"introduzca una clave para su mensaje: ";
+    cin>>clave;
+    cout<<"\nTu mensaje invertido es: "<<invertir(mensaje)<<endl;
+    cout<<mensaje<<endl;
+    cout<<"Tu clave es: "<<clave<<"\n"<<endl;
+    encriptado(mensaje,clave);
+    cout<<"\n\nMensaje encriptado: "<<mensaje<<endl;
+    desencriptado(mensaje,clave);
 }
