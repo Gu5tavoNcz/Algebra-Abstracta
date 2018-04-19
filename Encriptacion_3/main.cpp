@@ -1,41 +1,21 @@
-#include <iostream>
-#include <fstream>
-#include <string>
 
-using namespace std;
+#include "Encriptado.h"
+#include "Desencriptado.h"
 
-string lista="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ.,_-0123456789";
-
-string invertir(string &mensaje)
-{
-    for(int i=0;i<mensaje.length();i++)
-    {
-        for(int j=0;j<lista.length();j++)
-        {
-            if(mensaje[i]==lista[j])
-            {
-                mensaje[i]=lista[lista.length()-j-1];
-                break;
-            }
-        }
-    }
-    return mensaje;
-}
-
-string encriptar(string mensaje,int clave)
-{
-    string cadena[clave];
-    for(int i=0;i<clave;i++)
-        cadena[i].resize(clave,' ');
-    int cont=0;
-    for(int i=0;i<mensaje.length();i++)
-    {
-        if(cont>0)
-    }
-}
 
 int main()
 {
-    cout << "Hello world!" << endl;
-    return 0;
+    string mensaje;
+    int clave;
+    cout<<"Introduzca un mensaje a encriptar: ";
+    getline(cin,mensaje);
+    cout<<"introduzca una clave para su mensaje: ";
+    cin>>clave;
+    encriptado(mensaje,clave);
+    cout<<"\n\nMensaje encriptado: "<<mensaje<<endl;
+    ofstream fs("Mi mensaje.txt");
+    fs << mensaje << endl;
+    fs.close();
+    //desencriptado(mensaje,clave);
+    //desencriptado(mensaje,clave); Este es un mensaje ENCRIPTADO para la clase de Algebra Abstracta - Ciencia de la computacion. Gustavo Naupa Canaza 47819563
 }

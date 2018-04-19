@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1524156392 source:c:\users\gustavo\documents\programacion\algebra-abstracta\encriptacion_3\main.cpp
+	"Encriptado.h"
+	"Desencriptado.h"
+
+1524156182 c:\users\gustavo\documents\programacion\algebra-abstracta\encriptacion_3\encriptado.h
+	<iostream>
+	<fstream>
+	<string>
+
+1524160638 c:\users\gustavo\documents\programacion\algebra-abstracta\encriptacion_3\desencriptado.h
+	"Encriptado.h"
+
