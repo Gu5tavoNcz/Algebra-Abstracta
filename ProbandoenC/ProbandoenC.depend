@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1524612753 source:c:\users\gustavo\documents\programacion\algebra-abstracta\probandoenc\main.c
+	<stdio.h>
+	<string.h>
+

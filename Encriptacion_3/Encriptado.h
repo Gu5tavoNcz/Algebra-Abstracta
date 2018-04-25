@@ -26,10 +26,10 @@ string invertir(string &mensaje)
 
 void encriptado(string &mensaje,int clave)
 {
+    invertir(mensaje);
     string lista[clave],encrip;
     int cont=1;
     bool f=true;
-    cout<<"\n\n"<<endl;
     lista[0].replace(0,1,mensaje,0,1);
     while(f==true)
     {
@@ -86,7 +86,6 @@ void encriptado(string &mensaje,int clave)
         }
     }
     mensaje=encrip;
-    cout<<"tamano del mensaje"<<mensaje.length()<<endl;
 }
 
 
