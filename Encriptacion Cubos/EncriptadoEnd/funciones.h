@@ -1,6 +1,7 @@
+#ifndef FUNCIONES_H_INCLUDED
+#define FUNCIONES_H_INCLUDED
 #include <iostream>
 #include <string>
-#include <fstream>
 
 using namespace std;
 
@@ -237,67 +238,4 @@ string ene(int n,string &mensaje, int &cont)
     return cadena;
 }
 
-string encriptando(int n,int m,string &mensaje)
-{
-    string temp;
-    int contando=0;
-    temp.resize((n*n)*n,'*');
-    for(int i=0;i<n*n;i+=n)
-    {
-        for(int j=i;j<(n*n)*m;j+=n*n)
-        {
-            temp.replace(contando,n,mensaje,j,n);
-            contando+=n;
-        }
-    }
-    for(int i=temp.length()-1;i>=0;i--)
-    {
-        if(temp[i]=='*')
-            temp.erase(i,1);
-    }
-    mensaje=temp;
-    return mensaje;
-}
-
-
-int main()
-{
-    string mensaje,encriptado;
-    int cuadrados,tamano,contando=0;
-    cout<<"Introduzca el mensaje: ";
-    getline(cin,mensaje);
-    cout<<"intruzca el numero de cuadrados en su encrioptado: ";
-    cin>>cuadrados;
-    cout<<"Intriduzca el tamano de cada cuadrado: ";
-    cin>>tamano;
-    //invertir(mensaje);
-    while(contando<cuadrados)
-    {
-        if(contando<cuadrados)
-        {
-            encriptado+=caracol(tamano,mensaje,cont);
-            contando++;
-        }
-        if(contando<cuadrados)
-        {
-            encriptado+=zeta(tamano,mensaje,cont);
-            contando++;
-        }
-        if(contando<cuadrados)
-        {
-            encriptado+=espiral(tamano,mensaje,cont);
-            contando++;
-        }
-        if(contando<cuadrados)
-        {
-            encriptado+=ene(tamano,mensaje,cont);
-            contando++;
-        }
-    }
-    cout<<mensaje.length()<<"\t"<<encriptado.length()<<endl;
-    encriptando(tamano,cuadrados,encriptado);
-    cout<<"\n\n"<<mensaje<<"\n"<<encriptado<<endl;
-    ofstream fs("Mi mensaje.txt");
-    fs <<"Num Cuadratos: "<<cuadrados<<"\n\nTamano de cada cuadrado: "<<tamano<<"\n\nMensaje :"<<mensaje<<"\n\nEncriptado :"<<encriptado<<endl;
-    fs.close();
-}
+#endif // FUNCIONES_H_INCLUDED

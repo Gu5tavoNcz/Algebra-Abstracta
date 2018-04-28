@@ -1,0 +1,7 @@
+Num Cuadratos: 9
+
+Tamano de cada cuadrado: 5
+
+Mensaje :La clase de cadena est ndar proporciona compatibilidad para tales objetos con una interfaz similar a la de un contenedor est ndar de bytes, pero agrega caracter≠sticas diseœadas espec≠ficamente para operar con cadenas de caracteres de un solo byte.
+
+Encriptado :cadeLpibitt  rfazcese ry r≠stie  nnaoolana sosear od tnoob,pgrsecgetda arri opaebotl sna u tcd seaeiœaadse crpcdcomrljtnimi  anneneeer td s  esal iad paaei anul dar dtocarac
