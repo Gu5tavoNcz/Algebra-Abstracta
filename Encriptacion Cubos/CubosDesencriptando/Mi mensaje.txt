@@ -1,0 +1,9 @@
+Num Cuadrados: 4
+
+Tamano de cada cuadrado: 4
+
+Mensaje :0ab1lvutEIO9fc2gkmwpsDHJN8ed3hjnxqrCGKM7654ioyzABFL
+
+Encriptado :IO90Dnjh6oLEgfaksHx837iyFt2cbmpJqedM4zBuvl1wNrCGK5A
+
+Desencriptado: 1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNO

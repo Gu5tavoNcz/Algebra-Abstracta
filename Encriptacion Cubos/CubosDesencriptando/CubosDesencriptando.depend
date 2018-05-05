@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1525506811 source:c:\users\gustavo\documents\programacion\algebra-abstracta\encriptacion cubos\cubosdesencriptando\main.cpp
+	"encriptado.h"
+	"desencriptado.h"
+	<fstream>
+
+1525226037 c:\users\gustavo\documents\programacion\algebra-abstracta\encriptacion cubos\cubosdesencriptando\encriptado.h
+	"funciones.h"
+
+1525494957 c:\users\gustavo\documents\programacion\algebra-abstracta\encriptacion cubos\cubosdesencriptando\funciones.h
+	<iostream>
+	<string>
+
+1525506489 c:\users\gustavo\documents\programacion\algebra-abstracta\encriptacion cubos\cubosdesencriptando\desencriptado.h
+	<string>
+	"funciones.h"
+

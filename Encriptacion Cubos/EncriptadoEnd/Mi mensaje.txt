@@ -1,7 +1,7 @@
-Num Cuadratos: 10
+Num Cuadratos: 5
 
-Tamano de cada cuadrado: 4
+Tamano de cada cuadrado: 6
 
-Mensaje :1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ************************************
+Mensaje :este es un mensaje para probar si todo marcha bien
 
-Encriptado :0ab1lvutEIOYZ1PakjitxDNOPEZ9fc2gkmwpsDHJNX52Q60blehswyCMTQFUY8ed3hjnxqrCGKMW43R79cmfgrvzBLSRGVX7654ioyzABFLVUTS8dnopquAKJIHW
+Encriptado :aje peasr sash naoirtdcbebt aeorimorp   ae nu semn

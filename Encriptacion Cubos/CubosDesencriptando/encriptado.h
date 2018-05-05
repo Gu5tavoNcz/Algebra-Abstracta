@@ -34,7 +34,7 @@ string encriptando(int n,int m,string mensaje)
     string temp;
     contando=0;
     temp.resize((n*n)*n,'*');
-    for(int i=0;i<n*n;i+=n)
+    for(int i=0;i<n*n;i+=n) //<- LEYENDO EN FORMA HORIZONTAL
     {
         for(int j=i;j<(n*n)*m;j+=n*n)
         {

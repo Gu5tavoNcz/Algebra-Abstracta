@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    string mensaje,encriptado;
+    string mensaje,encriptado,desencriptado;
     int cuadrados,tamano,contando=0;
     cout<<"Introduzca el mensaje: ";
     getline(cin,mensaje);
@@ -16,8 +16,8 @@ int main()
     //invertir(mensaje);
 
     encriptado=encriptando(tamano,cuadrados,mensaje);
-    cout<<"\n\n"<<mensaje<<"\n"<<encriptado<<endl;
-    cout<<mensaje.length()<<"\t"<<encriptado.length()<<endl;
+    cout<<"\n\n"<<mensaje<<"\n"<<encriptado<<"\n"<<desencriptado<<endl;
+    //cout<<mensaje.length()<<"\t"<<encriptado.length()<<endl;
     ofstream fs("Mi mensaje.txt");
     fs <<"Num Cuadratos: "<<cuadrados<<"\n\nTamano de cada cuadrado: "<<tamano<<"\n\nMensaje :"<<mensaje<<"\n\nEncriptado :"<<encriptado<<endl;
     fs.close();
